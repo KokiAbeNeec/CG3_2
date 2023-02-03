@@ -37,8 +37,10 @@ VSOutput main(float4 pos : POSITION, float3 normal : NORMAL, float2 uv : TEXCOOR
 	float3 specular = pow(saturate(dot(reflect, eyedir)), shininess) * m_specular;
 
 	// 全て加算する
-	output.color.rgb = (ambient + diffuse + specular) * lightcolor;
-	output.color.a = m_alpha;
+	//output.color.rgb = (ambient + diffuse + specular) * lightcolor;
+	//output.color.a = m_alpha;
+	output.worldpos = wpos;
+	output.normal = wnormal.xyz;
 	output.uv = uv;
 
 	return output;
