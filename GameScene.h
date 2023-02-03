@@ -6,6 +6,7 @@
 #include "Input.h"
 #include "Object3d.h"
 #include "Sprite.h"
+#include "Light.h"
 #include <DirectXMath.h>
 
 /// <summary>
@@ -55,6 +56,7 @@ class GameScene {
 	Input* input = nullptr;
 	DebugText debugText;
 	DebugCamera* camera = nullptr;
+	Light* light = nullptr;
 
 	/// <summary>
 	/// ゲームシーン用
